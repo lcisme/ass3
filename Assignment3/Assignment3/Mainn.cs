@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -46,6 +46,28 @@ namespace Assignment3
             nn1.soluong = 54;
             nn1.tinhtien();
             nn1.hienthi();
+
+            Console.WriteLine("\nSo luong khach Viet Nam");
+            // dem luong khach vn 
+            CountKH ctvn = new CountKH();
+            ctvn.demkvn(vn.soluong);
+            ctvn.demkvn(vn1.soluong);
+            ctvn.demkhachvn();
+            Console.WriteLine(ctvn.slkhachvn);
+
+            Console.WriteLine("\nSo luong khach Nuoc Ngoai");
+            CountKH ctnn = new CountKH();
+            ctnn.demknn(nn.soluong);
+            ctnn.demknn(nn1.soluong);
+            ctnn.demkhachnn();
+            Console.WriteLine(ctnn.slkhachnn);
+
+            Console.WriteLine("\nGia tien trung binh cua khach nuoc ngoai");
+            TBTienKhachNN tbtknn = new TBTienKhachNN();
+            tbtknn.slkh(nn.giatien);
+            tbtknn.slkh(nn1.giatien);
+            tbtknn.giatientb();
+            Console.WriteLine(tbtknn.giatientb());
         }
     }
 }
